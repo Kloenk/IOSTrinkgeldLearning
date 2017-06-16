@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var TrinkGeldTextFeld: UITextField!
     @IBOutlet weak var Ausgabe: UILabel!
     
+    @IBOutlet weak var ErgebnisTextLable: UILabel!
+    
     @IBAction func ausrechnenGedrückt(_ sender: Any) {
         RechnungsTextFeld.resignFirstResponder()
         TrinkGeldTextFeld.resignFirstResponder()
@@ -22,7 +24,8 @@ class ViewController: UIViewController {
         let ausgabe = String(Double(changeToDot(RechnungsTextFeld.text!)!)! * Double(changeToDot(TrinkGeldTextFeld.text!)!)! / 100)
         
         print(ausgabe)
-        Ausgabe.text = changeToComma(ausgabe)!
+        ErgebnisTextLable.text = "Ergegnis"
+        Ausgabe.text = changeToComma(GesamtPreis(ausgabe))!
         
     }
     
@@ -44,9 +47,29 @@ class ViewController: UIViewController {
         return(v)
     }
     
+    func GesamtPreis(_ text: String!) -> String! {
+        var v: String
+        let Betrag = changeToDot(RechnungsTextFeld.text)
+        v = String(Double(text)! + Double(Betrag!)!)
+        return v
+    }
+    
+    /*func removeUnusedDot(_ text: String!) -> String! {
+        var v = text
+        let index = v?.index(of: ".") ?? v?.endIndex
+        if v?[index<v?.endIndex] == "0" {
+            
+        }
+        return v
+    }*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Ausgabe.text = ""
+        ErgebnisTextLable.text = ""
+        
+        RechnungsTextFeld.becomeFirstResponder()
     }
 
     /*override func didReceiveMemoryWarning() {

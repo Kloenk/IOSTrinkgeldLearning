@@ -10,6 +10,24 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="d0q-3w-EcL">
+            <objects>
+                <viewController id="leo-Tg-7hu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZKc-FH-KHc"/>
+                        <viewControllerLayoutGuide type="bottom" id="DRD-cg-xTf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y5n-hc-GP6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veu-Yj-RIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033" y="122"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DieMachenNurDieBeine" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,19 +82,29 @@
                                     <action selector="ausrechnenGedrückt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RpV-el-iOL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0,0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-5i-vbb">
-                                <rect key="frame" x="166" y="352" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-5i-vbb">
+                                <rect key="frame" x="152" y="352" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wuk-q5-WmD">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="recents" id="xsU-88-2IX"/>
+                                    <tabBarItem systemItem="more" id="toE-Yd-06B"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.50589670060000003" green="1" blue="0.43235025939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="Ausgabe" destination="Xda-5i-vbb" id="D4k-Cd-Qzb"/>
+                        <outlet property="ErgebnisTextLable" destination="DSr-ZI-gr8" id="3NB-TF-MsJ"/>
                         <outlet property="RechnungsTextFeld" destination="f6p-Sr-L0x" id="rEu-kd-Egb"/>
                         <outlet property="TrinkGeldTextFeld" destination="ljX-Xx-5Tj" id="aXG-Et-By8"/>
                     </connections>
@@ -84,6 +112,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-71.200000000000003" y="101.19940029985008"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yq7-AO-kwj">
+            <objects>
+                <viewController id="LgF-sM-5HP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4rv-bS-Hnd"/>
+                        <viewControllerLayoutGuide type="bottom" id="vQr-ec-lwa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bPj-FT-2Cf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3H-gX-oYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
