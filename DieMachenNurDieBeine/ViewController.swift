@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var TrinkGeldTextFeld: UITextField!
     
     @IBAction func ausrechnenGedrückt(_ sender: Any) {
+        RechnungsTextFeld.resignFirstResponder()
+        TrinkGeldTextFeld.resignFirstResponder()
         
+        print("Button Pressed")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
