@@ -64,11 +64,19 @@
                                     <action selector="ausrechnenGedrückt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RpV-el-iOL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-5i-vbb">
+                                <rect key="frame" x="166" y="352" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.50589670060000003" green="1" blue="0.43235025939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="Ausgabe" destination="Xda-5i-vbb" id="D4k-Cd-Qzb"/>
                         <outlet property="RechnungsTextFeld" destination="f6p-Sr-L0x" id="rEu-kd-Egb"/>
                         <outlet property="TrinkGeldTextFeld" destination="ljX-Xx-5Tj" id="aXG-Et-By8"/>
                     </connections>

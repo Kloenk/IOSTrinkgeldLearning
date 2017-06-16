@@ -13,13 +13,20 @@ class ViewController: UIViewController {
     //MARK: Outlet
     @IBOutlet weak var RechnungsTextFeld: UITextField!
     @IBOutlet weak var TrinkGeldTextFeld: UITextField!
+    @IBOutlet weak var Ausgabe: UILabel!
     
     @IBAction func ausrechnenGedrückt(_ sender: Any) {
         RechnungsTextFeld.resignFirstResponder()
         TrinkGeldTextFeld.resignFirstResponder()
         
-        print("Button Pressed")
+        let ausgabe = String(Double(RechnungsTextFeld.text!)! * Double(TrinkGeldTextFeld.text!)! / 100)
+        
+        print(ausgabe)
+        Ausgabe.text = ausgabe
+        
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
