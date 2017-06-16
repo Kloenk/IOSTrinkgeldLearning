@@ -19,13 +19,30 @@ class ViewController: UIViewController {
         RechnungsTextFeld.resignFirstResponder()
         TrinkGeldTextFeld.resignFirstResponder()
         
-        let ausgabe = String(Double(RechnungsTextFeld.text!)! * Double(TrinkGeldTextFeld.text!)! / 100)
+        let ausgabe = String(Double(changeToDot(RechnungsTextFeld.text!)!)! * Double(changeToDot(TrinkGeldTextFeld.text!)!)! / 100)
         
         print(ausgabe)
-        Ausgabe.text = ausgabe
+        Ausgabe.text = changeToComma(ausgabe)!
         
     }
     
+    //MAKR: , . changer
+    func changeToDot(_ text: String!) -> String! {
+        var v = text
+        if text.contains(",") {
+            v = String(text.characters.map {$0 == "," ? ".": $0})
+            print(v!)
+        }
+        return v
+    }
+    
+    func changeToComma(_ text: String!) -> String! {
+        var v = text
+        if text.contains(".") {
+            v = String(text.map {$0 == "." ? ",": $0})
+        }
+        return(v)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
